@@ -11,7 +11,7 @@ namespace DesignPatterns.Singleton
 
     public static Instance GetInstance()
     {
-      if (!instance == null)
+      if (instance == null)
       {
         instance = new Instance();
       }
