@@ -1,12 +1,28 @@
 using System;
+using DesignPatterns.Singleton;
 
 namespace DesignPatterns.Singleton
 {
-  public sealed class MyClass
+  public sealed class Singleton
   {
-    public static void Main()
+    private static Instance instance;
+
+    private Singleton() { }
+
+    public static Instance GetInstance()
     {
-      Console.WriteLine("Hello World!");
+      if (!instance == null)
+      {
+        instance = new Instance();
+      }
+
+      return instance;
+    }
+
+    public static void SetValue(string value)
+    {
+      Instance inst = GetInstance();
+      inst.Value = value;
     }
   }
 }
