@@ -4,7 +4,7 @@ namespace DesignPatterns.Singleton
 {
   public class Instance
   {
-    public Instance() { }
+    public Instance() { Value = "Default"; }
 
     public string Value
     {
